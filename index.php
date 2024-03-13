@@ -1,22 +1,4 @@
-<?php
-// تأمين الإدخالات
-function secureInput($data) {
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    return $data;
-}
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // التحقق من أن البحث تم بواسطة POST
-    if(isset($_POST["search"])) {
-        // تأمين النص المدخل للبحث
-        $search_query = secureInput($_POST["search"]);
-        // قم بتنفيذ البحث أو المعالجة اللازمة هنا
-        // ...
-    }
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
