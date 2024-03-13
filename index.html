@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,7 +26,7 @@
     </style>
 </head>
 <body class="body">
-    <form class="form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+    <form class="form" method="post">
         <!-- إضافة عنصر البحث -->
         <input type="search" name="search" placeholder="ابحث عن الفيديو...">
         <button type="submit">بحث</button>
@@ -63,5 +62,16 @@
             </div>
         </div>
     </form>
+
+    <script>
+        function validateSearch() {
+            var searchInput = document.getElementById("searchInput").value.trim();
+            if (searchInput === "") {
+                alert("يرجى إدخال كلمة بحث صالحة");
+                return false;
+            }
+            return true;
+        }
+    </script>
 </body>
 </html>
